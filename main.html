@@ -10,18 +10,21 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			let Highest = -2084858;
-           let secondHigh = -2084858
-			for(let i = 0; i<arr.length; i++){
-     if(arr[i] > Highest){
-        secondHigh = Highest
-        Highest = arr[i]
+			let Highest = -Infinity;
+let secondHigh = -Infinity;
+for(let i = 0; i<arr.length; i++){
+    if(arr[i] > Highest){
+        secondHigh = Highest;
+        Highest = arr[i];
     }
     else if(arr[i] > secondHigh && arr[i] < Highest){
-        secondHigh = arr[i]
+        secondHigh = arr[i];
     }
 }
- return secondHighest
+if(secondHigh == -Infinity || Highest == secondHigh) {
+    return -Infinity;
+}
+return secondHigh;
 
 
 		}
