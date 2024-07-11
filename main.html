@@ -10,7 +10,17 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			for(let i = 0; i<arr.length; i++){
+    if(arr[i] > Highest){
+        secondHigh = Highest
+        Highest = arr[i]
+    }
+    else if(arr[i] > secondHigh && arr[i] < Highest){
+        secondHigh = arr[i]
+    }
+}
+
+
 		}
 
 		function Main() {
